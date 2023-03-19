@@ -12,22 +12,14 @@ namespace WebService.Controllers
     [Route("[controller]")]
     public class LicenseHandlerController : Controller
     {
-        private const string licenseFileName = "license-config.json";
-        private const string licenseFileFolder = "LicenseFile";
-        private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly ILogger<LicenseHandler> _logger;
+        public const string licenseFileName = "license-config.json";
+        public const string licenseFileFolder = "LicenseFile";
+        public static IWebHostEnvironment? _webHostEnvironment;        
 
-
-        public LicenseHandlerController(IWebHostEnvironment webHostEnvironment, ILogger<LicenseHandler> logger)
+        public LicenseHandlerController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
-            _logger = logger;
-        }
-
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        }       
 
         [HttpGet(Name = "LicenseHandler")]
         public LicenseHandler Get()
@@ -65,7 +57,7 @@ namespace WebService.Controllers
                 NotFound();
             }
 
-           string result = JSONUtility.UpdateJSONData(licData, sFileJson);
+           int result = JSONUtility.UpdateJSONData(licData, sFileJson);
             
            return Json(result);
         }

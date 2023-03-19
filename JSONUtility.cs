@@ -2,7 +2,7 @@
 {
     public static class JSONUtility
     {
-        public static string UpdateJSONData(LicenseHandler licData, string jsonFile)
+        public static int UpdateJSONData(LicenseHandler licData, string jsonFile)
         {
             string json = File.ReadAllText(jsonFile);
             dynamic jsonItem = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
@@ -11,7 +11,7 @@
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonItem, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(jsonFile, output);
 
-            return "Licence has been updated";
+            return StatusCodes.Status200OK;
         }
 
 
