@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebService", "WebService.csproj", "{16ACFF29-5A92-4E75-8492-F5DC17B64480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService.test", "..\WebService.test\WebService.test.csproj", "{8B45F098-3EBD-49D2-96AC-6E24585B00B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebService.test", "..\WebService.test\WebService.test.csproj", "{8B45F098-3EBD-49D2-96AC-6E24585B00B7}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "4_Secure_Setup", "..\4_Secure_Setup\4_Secure_Setup.vdproj", "{D8E7488E-3BB4-4416-84F8-B8BC4C767B3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{8B45F098-3EBD-49D2-96AC-6E24585B00B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B45F098-3EBD-49D2-96AC-6E24585B00B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B45F098-3EBD-49D2-96AC-6E24585B00B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E7488E-3BB4-4416-84F8-B8BC4C767B3F}.Debug|Any CPU.ActiveCfg = Debug
+		{D8E7488E-3BB4-4416-84F8-B8BC4C767B3F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
